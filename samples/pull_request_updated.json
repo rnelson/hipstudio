@@ -1,0 +1,59 @@
+{
+  "subscriptionId": "597d768e-893f-46e1-b555-7740d7235a22",
+  "notificationId": 1,
+  "id": "197afa46-a04f-4636-9c22-9b61cc12f1e3",
+  "eventType": "git.pullrequest.updated",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:43:45 PM",
+    "html": "Service Hooks Test 8/10/2014 1:43:45 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:43:45 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"git.pullrequest.updated\". Initiated: Sunday, August 10, 2014 1:43:45 PM",
+    "html": "Service Hooks Test 8/10/2014 1:43:45 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:43:45 PM (**markdown**)"
+  },
+  "resource": {
+    "repository": {
+      "id": "fcd445cc-5569-4c64-8724-71360c8a1360",
+      "url": "http://TFS_SERVER/COLLECTION/_apis/git/repositories/fcd445cc-5569-4c64-8724-71360c8a1360"
+    },
+    "pullRequestId": 4,
+    "status": "active",
+    "createdBy": {
+      "id": null,
+      "displayName": "John Doe",
+      "uniqueName": "DOMAIN\\johnd"
+    },
+    "creationDate": "2014-08-10T13:43:45.3262482+00:00",
+    "title": "Merge Dev to master",
+    "description": "7f7ef8 2\r\n762c92 in master\r\n",
+    "sourceRefName": "refs/heads/master",
+    "targetRefName": "refs/heads/dev",
+    "mergeStatus": "succeeded",
+    "mergeId": "a1f98aa5-3d84-4f6f-91a7-6f70989fa8bb",
+    "lastMergeSourceCommit": {
+      "commitId": "7f7ef8e51d083ed5370bfad09f9e6a89ded4f403",
+      "url": "http://TFS_SERVER/COLLECTION/_apis/git/repositories/fcd445cc-5569-4c64-8724-71360c8a1360/commits/7f7ef8e51d083ed5370bfad09f9e6a89ded4f403"
+    },
+    "lastMergeTargetCommit": {
+      "commitId": "ae84d2ba1c33e1e10b8bde643841b719ea0eb2ef",
+      "url": "http://TFS_SERVER/COLLECTION/_apis/git/repositories/fcd445cc-5569-4c64-8724-71360c8a1360/commits/ae84d2ba1c33e1e10b8bde643841b719ea0eb2ef"
+    },
+    "lastMergeCommit": {
+      "commitId": "c53a5c45a6f91a87604bd7686508bdc78ab4c949",
+      "url": "http://TFS_SERVER/COLLECTION/_apis/git/repositories/fcd445cc-5569-4c64-8724-71360c8a1360/commits/c53a5c45a6f91a87604bd7686508bdc78ab4c949"
+    },
+    "reviewers": [
+      {
+        "vote": 10,
+        "id": null,
+        "displayName": "Jane Roe",
+        "uniqueName": "DOMAIN\\janer"
+      }
+    ]
+  },
+  "createdDate": "2014-08-10T13:43:44.5656015Z"
+}
+

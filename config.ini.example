@@ -1,0 +1,8 @@
+[HipChat]
+Name = MyBot
+Token = 0123456789abcdef0123456789abcd
+Room = 12345
+
+[WebServer]
+Host = 0.0.0.0
+Port = 1984

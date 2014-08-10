@@ -1,0 +1,54 @@
+{
+  "subscriptionId": "dfe9a54f-fb4f-48c8-b8eb-7afa2542cef4",
+  "notificationId": 1,
+  "id": "d1b6c668-c92f-42eb-b78a-2dbb1ca0247e",
+  "eventType": "workitem.created",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:44:35 PM",
+    "html": "Service Hooks Test 8/10/2014 1:44:35 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:44:35 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"workitem.created\". Initiated: Sunday, August 10, 2014 1:44:35 PM",
+    "html": "Service Hooks Test 8/10/2014 1:44:35 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:44:35 PM (**markdown**)"
+  },
+  "resource": {
+    "update": {
+      "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates/123",
+      "revisionUrl": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+      "id": 1111,
+      "rev": 122,
+      "fields": [
+        {
+          "field": {
+            "id": 1,
+            "refName": "System.field",
+            "name": "field"
+          },
+          "originalValue": "",
+          "updatedValue": "Work item created or changed\nareaPath = \nworkItemType = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884\nhostId = 9c245ec9-59eb-4c16-a3b2-2604a9ed5d0c\ntfsSubscriptionId = be0f07fb-618d-400f-871e-f74e2e96e6e2"
+        }
+      ]
+    },
+    "updatesUrl": "http://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates",
+    "fields": [
+      {
+        "field": {
+          "id": 1,
+          "refName": "System.field",
+          "name": "field"
+        },
+        "value": "Work item created or changed\nareaPath = \nworkItemType = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884\nhostId = 9c245ec9-59eb-4c16-a3b2-2604a9ed5d0c\ntfsSubscriptionId = be0f07fb-618d-400f-871e-f74e2e96e6e2"
+      }
+    ],
+    "links": [],
+    "resourceLinks": [],
+    "id": 1111,
+    "rev": 123,
+    "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+    "webUrl": "http://TFS_SERVER/COLLECTION/_workitems/edit/1111"
+  },
+  "createdDate": "2014-08-10T13:44:34.5769792Z"
+}

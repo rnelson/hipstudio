@@ -1,0 +1,29 @@
+{
+  "subscriptionId": "e56b36ff-4d60-49e3-9aff-34c63d4e6fd8",
+  "notificationId": 4,
+  "id": "ef43e419-16da-4ecd-ae3b-dcb5f54a7239",
+  "eventType": "message.posted",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:44:14 PM",
+    "html": "Service Hooks Test 8/10/2014 1:44:14 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:44:14 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"message.posted\". Initiated: Sunday, August 10, 2014 1:44:14 PM",
+    "html": "Service Hooks Test 8/10/2014 1:44:14 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:44:14 PM (**markdown**)"
+  },
+  "resource": {
+    "id": 111,
+    "content": "Sample message content",
+    "messageType": "normal",
+    "postedTime": "2014-08-10T13:44:14.9989888+00:00",
+    "postedRoomId": 0,
+    "postedBy": {
+      "id": null,
+      "displayName": "John Daw"
+    }
+  },
+  "createdDate": "2014-08-10T13:44:14.2182047Z"
+}

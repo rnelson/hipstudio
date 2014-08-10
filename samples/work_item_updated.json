@@ -1,0 +1,55 @@
+{
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "notificationId": 26,
+  "id": "57a79168-564b-4bcf-9130-c19021d11de9",
+  "eventType": "workitem.updated",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:41:38 PM",
+    "html": "Service Hooks Test 8/10/2014 1:41:38 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:41:38 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"workitem.updated\". Initiated: Sunday, August 10, 2014 1:41:38 PM",
+    "html": "Service Hooks Test 8/10/2014 1:41:38 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:41:38 PM (**markdown**)"
+  },
+  "resource": {
+    "update": {
+      "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates/123",
+      "revisionUrl": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+      "id": 1111,
+      "rev": 122,
+      "fields": [
+        {
+          "field": {
+            "id": 1,
+            "refName": "System.field",
+            "name": "field"
+          },
+          "originalValue": "",
+          "updatedValue": "Work item created or changed\nareaPath = \nworkItemType = \nchangedFields = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884"
+        }
+      ]
+    },
+    "updatesUrl": "http://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates",
+    "fields": [
+      {
+        "field": {
+          "id": 1,
+          "refName": "System.field",
+          "name": "field"
+        },
+        "value": "Work item created or changed\nareaPath = \nworkItemType = \nchangedFields = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884"
+      }
+    ],
+    "links": [],
+    "resourceLinks": [],
+    "id": 1111,
+    "rev": 123,
+    "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+    "webUrl": "http://TFS_SERVER/COLLECTION/_workitems/edit/1111"
+  },
+  "createdDate": "2014-08-10T13:41:37.6646264Z"
+}
+

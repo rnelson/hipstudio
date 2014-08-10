@@ -1,0 +1,46 @@
+{
+  "subscriptionId": "b4632632-6aae-4ab5-9d17-0de41e83b91d",
+  "notificationId": 2,
+  "id": "fc9a8760-1221-4147-a130-838730205d00",
+  "eventType": "git.push",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:42:29 PM",
+    "html": "Service Hooks Test 8/10/2014 1:42:29 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:42:29 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"git.push\". Initiated: Sunday, August 10, 2014 1:42:29 PM",
+    "html": "Service Hooks Test 8/10/2014 1:42:29 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:42:29 PM (**markdown**)"
+  },
+  "resource": {
+    "refUpdates": [
+      {
+        "name": "refs/heads/master",
+        "oldObjectId": "0000000000000000000000000000000000000000",
+        "newObjectId": "ffffffffffffffffffffffffffffffffffffffff"
+      }
+    ],
+    "repository": {
+      "name": "TesterRepo",
+      "url": "http://me.visualstudio.com/DefaultCollection/_apis/git/repositories/00000000-0000-0000-0000-000000000000",
+      "project": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "ProjectOne",
+        "url": null
+      },
+      "defaultBranch": "refs/heads/master",
+      "remoteUrl": "http://me.visualstudio.com/DefaultCollection/_git/TesterRepo"
+    },
+    "pushedBy": {
+      "id": "0003000082215287@Live.com",
+      "displayName": "John Doe",
+      "uniqueName": "Windows Live ID\\johndoe@microsoft.com"
+    },
+    "pushId": 12345,
+    "date": "2014-08-10T13:42:29.6250179Z",
+    "url": "http://me.visualstudio.com/DefaultCollection/_apis/git/MyProject/repositories/MyRepo/pushes/12345"
+  },
+  "createdDate": "2014-08-10T13:42:28.9027229Z"
+}

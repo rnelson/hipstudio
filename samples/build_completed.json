@@ -1,0 +1,24 @@
+{
+  "subscriptionId": "2035acf3-6c71-46be-8a0a-9443fa266892",
+  "notificationId": 2,
+  "id": "3affe7bb-5b36-4791-888e-4504b2f3cfa1",
+  "eventType": "build.complete",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:42:56 PM",
+    "html": "Service Hooks Test 8/10/2014 1:42:56 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:42:56 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"build.complete\". Initiated: Sunday, August 10, 2014 1:42:56 PM",
+    "html": "Service Hooks Test 8/10/2014 1:42:56 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:42:56 PM (**markdown**)"
+  },
+  "resource": {
+    "id": 1,
+    "name": "Build_1234",
+    "url": "https://rnelson.visualstudio.com/DefaultCollection/_apis/build/Builds/1",
+    "status": "succeeded"
+  },
+  "createdDate": "2014-08-10T13:42:56.1372864Z"
+}

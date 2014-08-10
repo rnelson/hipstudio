@@ -1,0 +1,55 @@
+{
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "notificationId": 27,
+  "id": "df4ef4d3-b31a-46e7-9fe6-b76dd12cc76c",
+  "eventType": "workitem.commented",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Service Hooks Test 8/10/2014 1:45:12 PM",
+    "html": "Service Hooks Test 8/10/2014 1:45:12 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:45:12 PM (**markdown**)"
+  },
+  "detailedMessage": {
+    "text": "Service Hooks test for publisher \"Team Foundation Server\", event type \"workitem.commented\". Initiated: Sunday, August 10, 2014 1:45:12 PM",
+    "html": "Service Hooks Test 8/10/2014 1:45:12 PM (<b>HTML</b>)",
+    "markdown": "Service Hooks Test 8/10/2014 1:45:12 PM (**markdown**)"
+  },
+  "resource": {
+    "update": {
+      "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates/123",
+      "revisionUrl": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+      "id": 1111,
+      "rev": 122,
+      "fields": [
+        {
+          "field": {
+            "id": 1,
+            "refName": "System.field",
+            "name": "field"
+          },
+          "originalValue": "",
+          "updatedValue": "Work item created or changed\nareaPath = \nworkItemType = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884"
+        }
+      ]
+    },
+    "updatesUrl": "http://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/updates",
+    "fields": [
+      {
+        "field": {
+          "id": 1,
+          "refName": "System.field",
+          "name": "field"
+        },
+        "value": "Work item created or changed\nareaPath = \nworkItemType = \nprojectId = 73a0760e-41c6-454e-81e5-25499d916884"
+      }
+    ],
+    "links": [],
+    "resourceLinks": [],
+    "id": 1111,
+    "rev": 123,
+    "url": "https://TFS_SERVER/COLLECTION/_apis/wit/workitems/1111/revisions/123",
+    "webUrl": "http://TFS_SERVER/COLLECTION/_workitems/edit/1111"
+  },
+  "createdDate": "2014-08-10T13:45:11.9838243Z"
+}
+
