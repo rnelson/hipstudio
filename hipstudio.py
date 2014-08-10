@@ -107,23 +107,11 @@ def index():
         message = user + ' pushed to ' + branch + ' on ' + repo + ' (' + date + ')'
         chat.info(message)
     elif 'workitem.created' == data['eventType']:
-        url = data['resource']['update']['url']
-        id = str(data['resource']['update']['id'])
-
-        message = 'New work item #' + id + ': ' + url
-        chat.info(message)
+        chat.info(data['detailedMessage']['text'])
     elif 'workitem.commented' == data['eventType']:
-        url = data['resource']['update']['url']
-        id = str(data['resource']['update']['id'])
-
-        message = 'Work item #' + id + ' has a new comment: ' + url
-        chat.info(message)
+        chat.info(data['detailedMessage']['text'])
     elif 'workitem.updated' == data['eventType']:
-        url = data['resource']['update']['url']
-        id = str(data['resource']['update']['id'])
-
-        message = 'Updated work item #' + id + ': ' + url
-        chat.info(message)
+        chat.info(data['detailedMessage']['text'])
 
 # Start the server
 print(PRODUCT + ' v' + VERSION)
