@@ -10,8 +10,15 @@ better customize the messages being posted.
 
 ## Prerequisites
 
-This project is written in Python 3 and requires a few third-party libraries. They can all be installed with pip 
-(e.g., `pip3` on OS X if installed from [Homebrew](http://brew.sh), `pip-python3` on Fedora 20):
+This project is written in Python 3 and requires a few third-party libraries:
+
++ [python-simple-hipchat](https://github.com/kurttheviking/python-simple-hipchat)
++ [bottle](http://bottlepy.org/docs/dev/index.html)
++ [simplejson](https://simplejson.github.io/simplejson/)
+
+They can all be installed with pip (e.g., `pip3` on OS X if installed from [Homebrew](http://brew.sh), `pip-python3` on 
+Fedora 20 (e.g., `yum install python3-setuptools; easy_install-3.3 pip`), `pip3` on Debian (e.g., `apt-get install 
+python3-setuptools; easy_install3 pip`):
 
 `pip3 install python-simple-hipchat bottle simplejson`
 
