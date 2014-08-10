@@ -8,6 +8,8 @@ HipStudio is a small web application to allow [Visual Studio Online](http://visu
 VSO [already supports HipChat](http://www.visualstudio.com/en-us/get-started/dn741294), but I wanted to be able to 
 better customize the messages being posted.
 
+
+
 ## Prerequisites
 
 This project is written in Python 3 and requires a few third-party libraries:
@@ -16,15 +18,54 @@ This project is written in Python 3 and requires a few third-party libraries:
 + [bottle](http://bottlepy.org/docs/dev/index.html)
 + [simplejson](https://simplejson.github.io/simplejson/)
 
-They can all be installed with pip (e.g., `pip3` on OS X if installed from [Homebrew](http://brew.sh), `pip-python3` on 
-Fedora 20 (e.g., `yum install python3-setuptools; easy_install-3.3 pip`), `pip3` on Debian (e.g., `apt-get install 
-python3-setuptools; easy_install3 pip`):
+They can all be installed with pip.
 
 `pip3 install python-simple-hipchat bottle simplejson`
 
+The following instructions are valid at time of writing for the various systems I've run this code on. Note that in all 
+cases I tell the package manager to give me Python 3, but I don't specify which minor version. The minor version 
+represented by that package may change the package for setuptools on FreeBSD (step 2) and the filenames for 
+easy_install on FreeBSD (step 3) and Fedora (step 3).
+
+### OS X
+
+1. Install [Homebrew](http://brew.sh)
+2. Install Python 3, `brew install python3`
+3. Install libraries, `pip3 install python-simple-hipchat bottle simplejson`
+
+### FreeBSD
+
+(Based on FreeBSD 10)
+
+1. Install Python 3, `pkg install python3`
+2. Install setuptools, `pkg install py33-setuptools33`
+3. Install pip, `easy_install-3.3 pip`
+4. Install libraries, `pip3 install python-simple-hipchat bottle simplejson`
+
+### Fedora
+
+(Based on Fedora 20. Version of easy_install may change)
+
+1. Install Python 3, `yum install python3`
+2. Install setuptools, `yum install python3-setuptools`
+3. Install pip, `easy_install-3.3 pip`
+4. Install libraries, `pip-python3 install python-simple-hipchat bottle simplejson`
+
+### Debian
+
+(Based on Debian 7. Version of easy_install may change)
+
+1. Install Python 3, `apt-get install python3`
+2. Install setuptools, `apt-get install python3-setuptools`
+3. Install pip, `easy_install-3 pip`
+4. Install libraries, `pip3 install python-simple-hipchat bottle simplejson`
+
+
+
 ## Installation
 
-There is no installation. Simply clone this repository somewhere, set up *config.ini*, and run *hipstudio.py*.
+There is no installation. Simply install the prerequisites, clone this repository somewhere, set up *config.ini*, and 
+run *hipstudio.py*.
 
 There is an included *config.ini.example* file. Copy this to *config.ini* and customize it to your liking.
 
@@ -36,6 +77,8 @@ coming from. *Room* and *Token* are the room ID and API token, respectively.
 
 The included *list_room_ids.py* script will help you find the ID for your room. To use it, set an administrator 
 token (not a notification token) in *config.ini* and simply run the script from the command line.
+
+
 
 ## License
 
