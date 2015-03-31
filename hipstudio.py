@@ -2,11 +2,13 @@
 from bottle import get, post, run, request, template
 import simplejson as json
 from smartchat import SmartChat
+from dateutil.parser import parse
 import configparser
+from sys import exit
 
 PRODUCT = 'HipStudio'
-VERSION = '0.0.1'
-COPYRIGHT = 'Copyright (C) 2014 Ross Nelson'
+VERSION = '0.0.2'
+COPYRIGHT = 'Copyright (C) 2014-2015 Ross Nelson'
 LICENSE = 'MIT'
 
 # Read the config file
@@ -19,6 +21,16 @@ PORT = config['WebServer'].get('Port', 1984)
 BOT_NAME = config['HipChat'].get('Name')
 HIPCHAT_TOKEN = config['HipChat'].get('Token')
 HIPCHAT_ROOM_ID = config['HipChat'].get('Room')
+DEFAULT_DATETIME_FORMAT = '%a, %d %b %Y at %I:%M %p'
+
+def getname(vsoname):
+    mappings = config['NameMappings']
+    for hcname, vsname in mappings.items():
+        if vsoname == vsname:
+            return '@' + hcname
+
+def formatdate(d):
+    return parse(d).strftime(DEFAULT_DATETIME_FORMAT)
 
 
 # Print out some info if a user tries to visit the url
@@ -56,7 +68,7 @@ def index():
     if 'build.complete' == data['eventType']:
         name = data['resource']['name']
         status = data['resource']['status']
-        date = data['createdDate']
+        date = formatdate(data['createdDate'])
 
         message = 'Build ' + name + ' ' + status + ' (' + date + ')'
         if 'succeeded' == status:
@@ -67,15 +79,15 @@ def index():
             chat.info(message)
     elif 'message.posted' == data['eventType']:
         content = data['resource']['content']
-        date = data['resource']['postedTime']
+        date = formatdate(data['resource']['postedTime'])
         name = data['resource']['postedBy']['displayName']
 
-        message = 'Chat: ' + date + ' <' + name + '>: ' + content
+        message = 'Chat: <' + name + '>: ' + content
         chat.yellow(message)
     elif 'git.pullrequest.created' == data['eventType']:
         id = str(data['resource']['pullRequestId'])
         name = data['resource']['createdBy']['displayName']
-        date = data['resource']['creationDate']
+        date = formatdate(data['resource']['creationDate'])
         title = data['resource']['title']
 
         # Swap src/dest because sourceRef is where you're creating the PR, which
@@ -83,12 +95,12 @@ def index():
         destination = data['resource']['sourceRefName']
         source = data['resource']['targetRefName']
 
-        message = 'New PR #' + id + ': ' + title + ' (' + source + ' => ' + destination + ') by ' + name + ' (' + date + ')'
+        message = getname(name) + ' created pull request #' + id + ' ((branch)' + source + ' => (branch)' + destination + '): ' + title + ' (' + date + ')'
         chat.info(message)
     elif 'git.pullrequest.updated' == data['eventType']:
         id = str(data['resource']['pullRequestId'])
         name = data['resource']['createdBy']['displayName']
-        date = data['resource']['creationDate']
+        date = formatdate(data['resource']['creationDate'])
         title = data['resource']['title']
 
         # Swap src/dest because sourceRef is where you're creating the PR, which
@@ -96,16 +108,16 @@ def index():
         destination = data['resource']['sourceRefName']
         source = data['resource']['targetRefName']
 
-        message = 'Updated PR #' + id + ': ' + title + ' (' + source + ' => ' + destination + ') by ' + name + ' (' + date + ')'
+        message = getname(name) + ' updated pull request #' + id + ' ((branch)' + source +' => (branch)' + destination + '): ' + title + ' (' + date + ')'
         chat.info(message)
     elif 'git.push' == data['eventType']:
         repo = data['resource']['repository']['name']
-        date = data['resource']['date']
+        date = formatdate(data['resource']['date'])
         user = data['resource']['pushedBy']['displayName']
         branch = data['resource']['refUpdates'][0]['name']
 
-        message = user + ' pushed to ' + branch + ' on ' + repo + ' (' + date + ')'
-        chat.info(message)
+        message = getname(user) + ' pushed to (branch)' + branch + ' on ' + repo + ' (' + date + ')'
+        chat.success(message)
     elif 'workitem.created' == data['eventType']:
         chat.info(data['detailedMessage']['text'])
     elif 'workitem.commented' == data['eventType']:
