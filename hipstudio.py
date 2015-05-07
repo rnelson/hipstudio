@@ -95,7 +95,7 @@ def index():
         destination = data['resource']['sourceRefName']
         source = data['resource']['targetRefName']
 
-        message = getname(name) + ' created pull request #' + id + ' ( (branch) ' + source + ' => (branch) ' + destination + '): ' + title + ' (' + date + ')'
+        message = getname(name) + ' created pull request #' + id + ' (' + source + ' -> ' + destination + '): ' + title + ' (' + date + ')'
         chat.info(message)
     elif 'git.pullrequest.updated' == data['eventType']:
         id = str(data['resource']['pullRequestId'])
@@ -108,7 +108,7 @@ def index():
         destination = data['resource']['sourceRefName']
         source = data['resource']['targetRefName']
 
-        message = getname(name) + ' updated pull request #' + id + ' ( (branch) ' + source +' => (branch)'  + destination + '): ' + title + ' (' + date + ')'
+        message = getname(name) + ' updated pull request #' + id + ' (' + source +' -> '  + destination + '): ' + title + ' (' + date + ')'
         chat.info(message)
     elif 'git.push' == data['eventType']:
         repo = data['resource']['repository']['name']
@@ -116,7 +116,7 @@ def index():
         user = data['resource']['pushedBy']['displayName']
         branch = data['resource']['refUpdates'][0]['name']
 
-        message = getname(user) + ' pushed to (branch) ' + branch + ' on ' + repo + ' (' + date + ')'
+        message = getname(user) + ' pushed to ' + branch + ' on ' + repo + ' (' + date + ')'
         chat.success(message)
     elif 'workitem.created' == data['eventType']:
         chat.info(data['detailedMessage']['text'])
